@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>QuizArena — Challenge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka+One&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container quiz-container">
+    <header class="quiz-head fade-in-up">
+      <a href="index.html" class="kicker back">← QuizArena</a>
+      <div class="quiz-meta">
+        <span id="qPlayer" class="kicker"></span>
+        <span id="qProgress" class="kicker"></span>
+        <span id="qTimer" class="kicker timer">20s</span>
+      </div>
+    </header>
+
+    <section id="quizScreen" class="board-card fade-in-up">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="progress"><div id="progressBar" class="progress-fill"></div></div>
+      <h2 id="qText" class="h-fluid-sm question"></h2>
+      <div id="qOptions" class="options"></div>
+      <div class="quiz-actions">
+        <button id="skipBtn" class="btn-ghost">Skip →</button>
+      </div>
+    </section>
+
+    <section id="resultsScreen" class="hidden fade-in-up">
+      <div class="board-card center">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <svg class="grade-ring" viewBox="0 0 200 200" width="200" height="200" aria-hidden="true">
+          <circle cx="100" cy="100" r="80" stroke="rgba(255,255,255,0.08)" stroke-width="14" fill="none"/>
+          <circle id="ringFill" cx="100" cy="100" r="80" stroke="url(#rg)" stroke-width="14" fill="none"
+                  stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="502" transform="rotate(-90 100 100)"/>
+          <defs><linearGradient id="rg" x1="0" y1="0" x2="200" y2="200">
+            <stop offset="0%" stop-color="#ffd84d"/><stop offset="100%" stop-color="#ff5722"/>
+          </linearGradient></defs>
+          <text id="ringGrade" x="100" y="92" text-anchor="middle" class="ring-grade">A</text>
+          <text id="ringPct" x="100" y="125" text-anchor="middle" class="ring-pct">0%</text>
+        </svg>
+        <h2 id="verdict" class="h-fluid-sm"></h2>
+        <p id="finalLine" class="muted"></p>
+        <div class="result-hero">
+          <div class="profile-summary">
+            <span id="resultProfileAvatar" class="profile-avatar">🙂</span>
+            <div>
+              <div id="resultProfileName" class="profile-name">Player</div>
+              <div id="resultProfileDetail" class="profile-detail">Your current quiz profile and analytics summary.</div>
+            </div>
+          </div>
+          <div class="result-analytics">
+            <div class="analytics-card">
+              <div class="analytics-value" id="profileQuizzes">0</div>
+              <div class="analytics-label">Quizzes completed</div>
+            </div>
+            <div class="analytics-card">
+              <div class="analytics-value" id="profileAvg">Avg 0%</div>
+              <div class="analytics-label">Average score</div>
+            </div>
+            <div class="analytics-card">
+              <div class="analytics-value" id="profileBest">Best 0%</div>
+              <div class="analytics-label">High score</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-3 stat-tiles modern-tiles">
+          <div class="tile"><div id="tCorrect" class="tile-num green">0</div><div class="tile-label">Correct</div></div>
+          <div class="tile"><div id="tWrong" class="tile-num red">0</div><div class="tile-label">Wrong</div></div>
+          <div class="tile"><div id="tSkipped" class="tile-num yellow">0</div><div class="tile-label">Skipped</div></div>
+        </div>
+        <div class="accuracy-bar"><div id="accCorrect"></div><div id="accWrong"></div><div id="accSkip"></div></div>
+        <details class="review">
+          <summary>Review answers</summary>
+          <ol id="reviewList"></ol>
+        </details>
+        <div class="quiz-actions center">
+          <button class="btn-primary" onclick="QA.restart()">Play again</button>
+          <a class="btn-ghost" href="index.html">Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+  <script>QA.initQuiz();</script>
+</body>
+</html>

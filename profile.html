@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Create your profile — QuizArena</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka+One&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container center-screen">
+    <div class="profile-wrap fade-in-up">
+      <a href="index.html" class="kicker back">← QuizArena</a>
+      <div class="board-card profile-card">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <p class="kicker">Step 1 of 1</p>
+        <h1 class="h-fluid-sm">Pick your handle</h1>
+        <p class="muted small">No email, no password. Just a name to put on the leaderboard.</p>
+        <form id="profileForm">
+          <label class="field">
+            <span class="field-label">Username</span>
+            <input id="username" name="username" maxlength="20" autofocus placeholder="e.g. NovaRider" required />
+          </label>
+          <div class="field">
+            <span class="field-label">Avatar (optional)</span>
+            <div class="avatar-grid" id="avatarGrid"></div>
+          </div>
+          <button class="btn-primary full" type="submit" id="submitBtn">Enter Arena →</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+  <script>QA.initProfile();</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>QuizArena — Learn, Compete, Level Up</title>
+  <meta name="description" content="A gamified quiz platform. Pick a name, beat the clock, climb the leaderboard." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka+One&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230a0a0a'/%3E%3Cpath d='M16 17a8 8 0 1 1 12.5 6.6L31 28h-4l-1.6-2.6a8 8 0 0 1-9.4-8.4z' fill='%23ff9a1a'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <main class="container">
+    <nav class="nav fade-in-up">
+      <a class="logo" href="index.html" aria-label="QuizArena home">
+        <svg width="36" height="36" viewBox="0 0 48 48" class="logo-mark" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ffd84d"/><stop offset="55%" stop-color="#ff9a1a"/><stop offset="100%" stop-color="#ff5722"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="44" height="44" rx="12" fill="#0a0a0a" stroke="url(#g)" stroke-width="2.5"/>
+          <path d="M16 17a8 8 0 1 1 12.5 6.6L31 28h-4l-1.6-2.6a8 8 0 0 1-9.4-8.4z" fill="url(#g)"/>
+          <circle cx="22" cy="17" r="2.4" fill="#0a0a0a"/>
+          <rect x="28" y="30" width="8" height="3" rx="1.5" fill="url(#g)"/>
+        </svg>
+        <span class="logo-text">Quiz<span class="grad">Arena</span></span>
+      </a>
+      <span class="kicker hide-sm">v1.0 · LIVE</span>
+    </nav>
+
+    <section class="hero-frame fade-in-up">
+      <p class="kicker">A gamified learning arena</p>
+      <h1 class="h-fluid">Learn faster.<br><span class="grad type-cursor">Play smarter.</span></h1>
+      <p class="lead">Bite-sized timed quizzes, instant feedback, and a leaderboard that keeps you coming back.</p>
+      <div class="hero-meta fade-in-up delay-200">
+        <span class="kicker">⚡ 15s per question</span>
+        <span class="kicker hide-sm">• 15 rounds</span>
+        <span class="kicker hide-sm">• instant grade</span>
+      </div>
+    </section>
+
+    <section class="section fade-in-up center">
+      <p class="kicker">About</p>
+      <h2 class="h-fluid-sm">What is QuizArena?</h2>
+      <div class="board-card max-w-prose">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <p class="muted">QuizArena is a playful, fast-paced platform that turns learning into a game. Pick a topic, beat the clock, review your answers, and watch your skills climb question by question.</p>
+      </div>
+    </section>
+
+    <section class="section fade-in-up center">
+      <p class="kicker">Vision</p>
+      <h2 class="h-fluid-sm">Our mission</h2>
+      <div class="grid grid-3">
+        <article class="board-card fade-in-up delay-100">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="emoji float-slow">🎯</div>
+          <h3>Learn by doing</h3><p class="muted small">Active recall beats passive reading. Every question is a rep.</p>
+        </article>
+        <article class="board-card fade-in-up delay-200">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="emoji float-slow">📈</div>
+          <h3>Track progress</h3><p class="muted small">Scores, accuracy, and personal bests — measured automatically.</p>
+        </article>
+        <article class="board-card fade-in-up delay-300">
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="emoji float-slow">🔥</div>
+          <h3>Stay motivated</h3><p class="muted small">Streaks, leaderboards, and instant feedback keep momentum high.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="section fade-in-up center">
+      <p class="kicker">Feedback</p>
+      <h2 class="h-fluid-sm">What players say</h2>
+      <div class="grid grid-3">
+        <article class="board-card"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="stars">★★★★★</div><p class="quote">"Beautifully designed and addictive. I do a round every morning with coffee."</p><p class="byline">— Olu</p></article>
+        <article class="board-card"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="stars">★★★★★</div><p class="quote">"The timer makes it feel like a game. Way better than flashcards."</p><p class="byline">— Stephen</p></article>
+        <article class="board-card"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <div class="stars">★★★★☆</div><p class="quote">"Love the leaderboard. My study group is hooked."</p><p class="byline">— Feranmi</p></article>
+      </div>
+    </section>
+
+    <section class="hero-frame center fade-in-up cta">
+      <h2 class="h-fluid-sm">Ready to play?</h2>
+      <p class="lead">Jump in. No sign-up, no email. Just pick a name and start.</p>
+      <a class="btn-primary" href="profile.html">BEGIN CHALLENGE →</a>
+    </section>
+
+    <footer class="footer">QuizArena · Built for curious minds</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
